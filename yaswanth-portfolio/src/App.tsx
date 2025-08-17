@@ -23,7 +23,10 @@ import {
   Menu,
   X,
   Star,
-  Zap
+  Zap,
+  Download,
+  Twitter,
+  Instagram
 } from "lucide-react";
 
 // Intersection Observer Hook for animations
@@ -358,6 +361,45 @@ export default function Portfolio() {
             cloud technologies, and innovative problem-solving.
           </p>
           
+          {/* Social Media Links */}
+          <div className={`flex justify-center space-x-6 transition-all duration-1000 delay-700 ${
+            heroInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          }`}>
+            <a 
+              href="https://www.linkedin.com/in/yaswanthd" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group flex items-center space-x-2 text-gray-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110"
+            >
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600/20 to-blue-500/20 rounded-full flex items-center justify-center group-hover:from-blue-600/40 group-hover:to-blue-500/40 transition-all duration-300">
+                <Linkedin className="w-5 h-5" />
+              </div>
+              <span className="text-sm font-medium">LinkedIn</span>
+            </a>
+            <a 
+              href="https://github.com/yaswanth-yashu" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group flex items-center space-x-2 text-gray-400 hover:text-gray-200 transition-all duration-300 transform hover:scale-110"
+            >
+              <div className="w-10 h-10 bg-gradient-to-r from-gray-600/20 to-gray-500/20 rounded-full flex items-center justify-center group-hover:from-gray-600/40 group-hover:to-gray-500/40 transition-all duration-300">
+                <Github className="w-5 h-5" />
+              </div>
+              <span className="text-sm font-medium">GitHub</span>
+            </a>
+            <a 
+              href="https://twitter.com/yaswanthd161" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-all duration-300 transform hover:scale-110"
+            >
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-600/20 to-cyan-500/20 rounded-full flex items-center justify-center group-hover:from-cyan-600/40 group-hover:to-cyan-500/40 transition-all duration-300">
+                <Twitter className="w-5 h-5" />
+              </div>
+              <span className="text-sm font-medium">Twitter</span>
+            </a>
+          </div>
+          
           <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-800 ${
             heroInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
@@ -368,6 +410,20 @@ export default function Portfolio() {
             >
               <span>Explore My Journey</span>
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/YaswanthD_resume_Software_Development_Engineer.pdf';
+                link.download = 'YaswanthD_Resume.pdf';
+                link.click();
+              }}
+              className="border-gray-600 text-gray-300 hover:bg-white/5 transform transition-all duration-300 hover:scale-105 glass group"
+            >
+              <Download className="mr-2 w-4 h-4 group-hover:animate-pulse" />
+              Download Resume
             </Button>
             <Button 
               size="lg" 
@@ -392,8 +448,36 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Section Separator */}
+      <div className="relative py-16 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent" />
+        <div className="container mx-auto px-4">
+          <div className="relative flex items-center justify-center">
+            <div className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/50 to-transparent" />
+            <div className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 px-8">
+              <div className="flex items-center space-x-4">
+                <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
+                <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
+                <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Floating decorative elements */}
+        <div className="absolute top-1/2 left-1/4 transform -translate-y-1/2 animate-float" style={{ animationDelay: '0s' }}>
+          <div className="w-1 h-1 bg-blue-400/30 rounded-full" />
+        </div>
+        <div className="absolute top-1/3 right-1/3 transform -translate-y-1/2 animate-float" style={{ animationDelay: '1.5s' }}>
+          <div className="w-1 h-1 bg-purple-400/30 rounded-full" />
+        </div>
+        <div className="absolute bottom-1/3 left-1/3 transform translate-y-1/2 animate-float" style={{ animationDelay: '2.5s' }}>
+          <div className="w-1 h-1 bg-cyan-400/30 rounded-full" />
+        </div>
+      </div>
+
       {/* About Section with staggered animations */}
-      <section id="about" className="py-20 px-4">
+      <section id="about" className="py-24 px-4 bg-gradient-to-b from-transparent to-black/10">
         <div className="container mx-auto">
           <div ref={aboutRef} className={`text-center mb-16 transform transition-all duration-1000 ${
             aboutInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
