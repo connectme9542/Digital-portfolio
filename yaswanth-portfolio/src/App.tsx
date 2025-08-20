@@ -330,13 +330,13 @@ export default function Portfolio() {
       </nav>
 
       {/* Hero Section with enhanced animations */}
-      <section className="min-h-screen flex items-center justify-center pt-16 sm:pt-20 px-4 pb-8 lg:pb-12 lg:pl-2 xl:pl-4 relative">
+      <section className="min-h-screen flex items-center justify-center pt-16 sm:pt-20 px-4 pb-8 lg:pb-12 relative">
         <div ref={heroRef} className={`container mx-auto transform transition-all duration-1000 ${
           heroInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
         }`}>
-          <div className="grid lg:grid-cols-2 gap-3 lg:gap-4 xl:gap-5 items-center max-w-6xl mx-auto lg:ml-auto lg:mr-8 xl:mr-12">
+          <div className="grid lg:grid-cols-2 gap-3 lg:gap-4 xl:gap-5 items-center max-w-5xl mx-auto lg:ml-16 xl:ml-20 2xl:ml-24">
             {/* Profile Image Section */}
-            <div className={`order-1 lg:order-1 flex justify-center lg:justify-end transition-all duration-1000 delay-200 ${
+            <div className={`order-1 lg:order-1 flex justify-center lg:justify-center transition-all duration-1000 delay-200 ${
               heroInView ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'
             }`}>
               <div className="relative group">
@@ -358,7 +358,7 @@ export default function Portfolio() {
             </div>
             
             {/* Content Section */}
-            <div className={`order-2 lg:order-2 text-center lg:text-left space-y-4 sm:space-y-6 lg:space-y-5 xl:space-y-6 transition-all duration-1000 delay-400 lg:pl-2 ${
+            <div className={`order-2 lg:order-2 text-center lg:text-left space-y-4 sm:space-y-6 lg:space-y-5 xl:space-y-6 transition-all duration-1000 delay-400 ${
               heroInView ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'
             }`}>
               <div className="space-y-2 sm:space-y-3 lg:space-y-2 xl:space-y-3">
