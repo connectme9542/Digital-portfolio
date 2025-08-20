@@ -334,7 +334,7 @@ export default function Portfolio() {
         <div ref={heroRef} className={`container mx-auto transform transition-all duration-1000 ${
           heroInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
         }`}>
-          <div className="grid lg:grid-cols-2 gap-4 lg:gap-6 xl:gap-8 items-center max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-2 lg:gap-3 xl:gap-4 items-center max-w-6xl mx-auto">
             {/* Profile Image Section */}
             <div className={`order-1 lg:order-1 flex justify-center lg:justify-end transition-all duration-1000 delay-200 ${
               heroInView ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'
@@ -358,7 +358,7 @@ export default function Portfolio() {
             </div>
             
             {/* Content Section */}
-            <div className={`order-2 lg:order-2 text-center lg:text-left space-y-4 sm:space-y-6 lg:space-y-5 xl:space-y-6 transition-all duration-1000 delay-400 lg:pl-4 ${
+            <div className={`order-2 lg:order-2 text-center lg:text-left space-y-4 sm:space-y-6 lg:space-y-5 xl:space-y-6 transition-all duration-1000 delay-400 lg:pl-2 ${
               heroInView ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'
             }`}>
               <div className="space-y-2 sm:space-y-3 lg:space-y-2 xl:space-y-3">
