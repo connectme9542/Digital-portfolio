@@ -330,109 +330,138 @@ export default function Portfolio() {
       </nav>
 
       {/* Hero Section with enhanced animations */}
-      <section className="min-h-screen flex items-center justify-center pt-20 px-4 relative">
-        <div ref={heroRef} className={`container mx-auto text-center space-y-8 transform transition-all duration-1000 ${
+      <section className="min-h-screen flex items-center justify-center pt-16 sm:pt-20 px-4 relative">
+        <div ref={heroRef} className={`container mx-auto transform transition-all duration-1000 ${
           heroInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
         }`}>
-          <div className="space-y-4">
-            <h1 className={`text-6xl md:text-8xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent transition-all duration-1000 ${
-              heroInView ? 'scale-100' : 'scale-95'
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Profile Image Section */}
+            <div className={`order-1 lg:order-1 flex justify-center lg:justify-end transition-all duration-1000 delay-200 ${
+              heroInView ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'
             }`}>
-              YASWANTH
-            </h1>
-            <h2 className={`text-2xl md:text-4xl font-light text-gray-300 transition-all duration-1000 delay-200 ${
-              heroInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-            }`}>
-              DHARMAVARAPU
-            </h2>
-            <div className={`text-lg md:text-2xl text-gray-400 space-y-2 transition-all duration-1000 delay-400 ${
-              heroInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-            }`}>
-              <div className="typing-animation">Electronics & Communication Engineer</div>
-              <div className="text-cyan-400 typing-animation" style={{ animationDelay: '1s' }}>Software Developer</div>
-              <div className="text-yellow-400 typing-animation" style={{ animationDelay: '2s' }}>AI/ML Enthusiast</div>
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-full blur opacity-30 group-hover:opacity-50 transition duration-300 animate-pulse"></div>
+                <div className="relative">
+                  <img 
+                    src="https://avatars.githubusercontent.com/u/86795414?v=4" 
+                    alt="Yaswanth Dharmavarapu"
+                    className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 rounded-full object-cover border-4 border-white/10 shadow-2xl transform transition-all duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-transparent to-white/5"></div>
+                </div>
+                {/* Floating elements around image */}
+                <div className="absolute top-4 -right-2 w-4 h-4 bg-blue-400/60 rounded-full animate-float" style={{ animationDelay: '0s' }}></div>
+                <div className="absolute -bottom-2 -left-4 w-3 h-3 bg-purple-400/60 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute top-1/2 -left-6 w-2 h-2 bg-cyan-400/60 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+              </div>
             </div>
-          </div>
-          
-          <p className={`text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 delay-600 ${
-            heroInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-          }`}>
-            Bridging the gap between hardware and software with expertise in embedded systems, 
-            cloud technologies, and innovative problem-solving.
-          </p>
-          
-          {/* Social Media Links */}
-          <div className={`flex justify-center space-x-6 transition-all duration-1000 delay-700 ${
-            heroInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-          }`}>
-            <a 
-              href="https://www.linkedin.com/in/yaswanthd" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="group flex items-center space-x-2 text-gray-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110"
-            >
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600/20 to-blue-500/20 rounded-full flex items-center justify-center group-hover:from-blue-600/40 group-hover:to-blue-500/40 transition-all duration-300">
-                <Linkedin className="w-5 h-5" />
+            
+            {/* Content Section */}
+            <div className={`order-2 lg:order-2 text-center lg:text-left space-y-6 sm:space-y-8 transition-all duration-1000 delay-400 ${
+              heroInView ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'
+            }`}>
+              <div className="space-y-3 sm:space-y-4">
+                <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent transition-all duration-1000 leading-tight ${
+                  heroInView ? 'scale-100' : 'scale-95'
+                }`}>
+                  YASWANTH
+                </h1>
+                <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-gray-300 transition-all duration-1000 delay-200 ${
+                  heroInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                }`}>
+                  DHARMAVARAPU
+                </h2>
+                <div className={`text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 space-y-1 sm:space-y-2 transition-all duration-1000 delay-400 ${
+                  heroInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                }`}>
+                  <div className="typing-animation">Electronics & Communication Engineer</div>
+                  <div className="text-cyan-400 typing-animation" style={{ animationDelay: '1s' }}>Software Developer</div>
+                  <div className="text-yellow-400 typing-animation" style={{ animationDelay: '2s' }}>AI/ML Enthusiast</div>
+                </div>
               </div>
-              <span className="text-sm font-medium">LinkedIn</span>
-            </a>
-            <a 
-              href="https://github.com/yaswanth-yashu" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="group flex items-center space-x-2 text-gray-400 hover:text-gray-200 transition-all duration-300 transform hover:scale-110"
-            >
-              <div className="w-10 h-10 bg-gradient-to-r from-gray-600/20 to-gray-500/20 rounded-full flex items-center justify-center group-hover:from-gray-600/40 group-hover:to-gray-500/40 transition-all duration-300">
-                <Github className="w-5 h-5" />
-              </div>
-              <span className="text-sm font-medium">GitHub</span>
-            </a>
-            <a 
-              href="https://twitter.com/yaswanthd161" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="group flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-all duration-300 transform hover:scale-110"
-            >
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-600/20 to-cyan-500/20 rounded-full flex items-center justify-center group-hover:from-cyan-600/40 group-hover:to-cyan-500/40 transition-all duration-300">
-                <Twitter className="w-5 h-5" />
-              </div>
-              <span className="text-sm font-medium">Twitter</span>
-            </a>
-          </div>
           
-          <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-800 ${
-            heroInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-          }`}>
-            <Button 
-              size="lg" 
-              onClick={() => scrollToSection('about')}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 group"
-            >
-              <span>Explore My Journey</span>
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              onClick={() => {
-                const link = document.createElement('a');
-                link.href = '/YaswanthD_resume_Software_Development_Engineer.pdf';
-                link.download = 'YaswanthD_Resume.pdf';
-                link.click();
-              }}
-              className="border-gray-600 text-gray-300 hover:bg-white/5 transform transition-all duration-300 hover:scale-105 glass group"
-            >
-              <Download className="mr-2 w-4 h-4 group-hover:animate-pulse" />
-              Download Resume
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              onClick={() => scrollToSection('contact')}
-              className="border-gray-600 text-gray-300 hover:bg-white/5 transform transition-all duration-300 hover:scale-105 glass"
-            >
-              Get In Touch
-            </Button>
+              <p className={`text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed transition-all duration-1000 delay-600 ${
+                heroInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+              }`}>
+                Bridging the gap between hardware and software with expertise in embedded systems, 
+                cloud technologies, and innovative problem-solving.
+              </p>
+          
+              {/* Social Media Links */}
+              <div className={`flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 transition-all duration-1000 delay-700 ${
+                heroInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+              }`}>
+                <a 
+                  href="https://www.linkedin.com/in/yaswanthd" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group flex items-center space-x-2 text-gray-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110"
+                >
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-blue-600/20 to-blue-500/20 rounded-full flex items-center justify-center group-hover:from-blue-600/40 group-hover:to-blue-500/40 transition-all duration-300">
+                    <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </div>
+                  <span className="text-xs sm:text-sm font-medium hidden sm:block">LinkedIn</span>
+                </a>
+                <a 
+                  href="https://github.com/yaswanth-yashu" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group flex items-center space-x-2 text-gray-400 hover:text-gray-200 transition-all duration-300 transform hover:scale-110"
+                >
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-gray-600/20 to-gray-500/20 rounded-full flex items-center justify-center group-hover:from-gray-600/40 group-hover:to-gray-500/40 transition-all duration-300">
+                    <Github className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </div>
+                  <span className="text-xs sm:text-sm font-medium hidden sm:block">GitHub</span>
+                </a>
+                <a 
+                  href="https://twitter.com/yaswanthd161" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-all duration-300 transform hover:scale-110"
+                >
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-cyan-600/20 to-cyan-500/20 rounded-full flex items-center justify-center group-hover:from-cyan-600/40 group-hover:to-cyan-500/40 transition-all duration-300">
+                    <Twitter className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </div>
+                  <span className="text-xs sm:text-sm font-medium hidden sm:block">Twitter</span>
+                </a>
+              </div>
+          
+              <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start transition-all duration-1000 delay-800 ${
+                heroInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+              }`}>
+                <Button 
+                  size="lg" 
+                  onClick={() => scrollToSection('about')}
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 group text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3"
+                >
+                  <span>Explore My Journey</span>
+                  <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = '/YaswanthD_resume_Software_Development_Engineer.pdf';
+                    link.download = 'YaswanthD_Resume.pdf';
+                    link.click();
+                  }}
+                  className="border-gray-600 text-gray-300 hover:bg-white/5 transform transition-all duration-300 hover:scale-105 glass group text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3"
+                >
+                  <Download className="mr-2 w-3 h-3 sm:w-4 sm:h-4 group-hover:animate-pulse" />
+                  Download Resume
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  onClick={() => scrollToSection('contact')}
+                  className="border-gray-600 text-gray-300 hover:bg-white/5 transform transition-all duration-300 hover:scale-105 glass text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3"
+                >
+                  Get In Touch
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
         
@@ -754,11 +783,30 @@ export default function Portfolio() {
                   integrating computer vision with text and speech conversion, involving direct 
                   troubleshooting of hardware/software integration issues.
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   <Badge variant="outline" className="text-gray-400 border-gray-600">OpenCV</Badge>
                   <Badge variant="outline" className="text-gray-400 border-gray-600">MediaPipe</Badge>
                   <Badge variant="outline" className="text-gray-400 border-gray-600">Python</Badge>
                   <Badge variant="outline" className="text-gray-400 border-gray-600">Computer Vision</Badge>
+                </div>
+                <div className="flex gap-3">
+                  <Button 
+                    size="sm"
+                    onClick={() => window.open('https://github.com/yaswanth-yashu/sign-language-converter', '_blank')}
+                    className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white border-0 transform transition-all duration-300 hover:scale-105 group flex-1"
+                  >
+                    <Github className="mr-2 w-3 h-3 group-hover:animate-bounce" />
+                    GitHub
+                  </Button>
+                  <Button 
+                    size="sm"
+                    variant="outline"
+                    onClick={() => window.open('#', '_blank')}
+                    className="border-blue-600 text-blue-400 hover:bg-blue-600/10 transform transition-all duration-300 hover:scale-105 group flex-1"
+                  >
+                    <ExternalLink className="mr-2 w-3 h-3 group-hover:animate-pulse" />
+                    Demo
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -783,11 +831,30 @@ export default function Portfolio() {
                   Bolt Hackathon. Utilized modern web technologies to build an intuitive interface 
                   that helps developers identify and improve code issues.
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   <Badge variant="outline" className="text-gray-400 border-gray-600">React</Badge>
                   <Badge variant="outline" className="text-gray-400 border-gray-600">Node.js</Badge>
                   <Badge variant="outline" className="text-gray-400 border-gray-600">AI</Badge>
                   <Badge variant="outline" className="text-gray-400 border-gray-600">Full Stack</Badge>
+                </div>
+                <div className="flex gap-3">
+                  <Button 
+                    size="sm"
+                    onClick={() => window.open('https://github.com/yaswanth-yashu/LintAI', '_blank')}
+                    className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white border-0 transform transition-all duration-300 hover:scale-105 group flex-1"
+                  >
+                    <Github className="mr-2 w-3 h-3 group-hover:animate-bounce" />
+                    GitHub
+                  </Button>
+                  <Button 
+                    size="sm"
+                    variant="outline"
+                    onClick={() => window.open('https://lintai-app.vercel.app', '_blank')}
+                    className="border-purple-600 text-purple-400 hover:bg-purple-600/10 transform transition-all duration-300 hover:scale-105 group flex-1"
+                  >
+                    <ExternalLink className="mr-2 w-3 h-3 group-hover:animate-pulse" />
+                    Live Demo
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -812,11 +879,30 @@ export default function Portfolio() {
                   Won 1st Prize at ROBO SPARK, Strides 2k24. Experience with sensor interfacing, 
                   system debugging, and real-time data processing.
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   <Badge variant="outline" className="text-gray-400 border-gray-600">Arduino</Badge>
                   <Badge variant="outline" className="text-gray-400 border-gray-600">Sensors</Badge>
                   <Badge variant="outline" className="text-gray-400 border-gray-600">C++</Badge>
                   <Badge variant="outline" className="text-gray-400 border-gray-600">1st Prize</Badge>
+                </div>
+                <div className="flex gap-3">
+                  <Button 
+                    size="sm"
+                    onClick={() => window.open('https://github.com/yaswanth-yashu/line-follower-robot', '_blank')}
+                    className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white border-0 transform transition-all duration-300 hover:scale-105 group flex-1"
+                  >
+                    <Github className="mr-2 w-3 h-3 group-hover:animate-bounce" />
+                    GitHub
+                  </Button>
+                  <Button 
+                    size="sm"
+                    variant="outline"
+                    onClick={() => window.open('#', '_blank')}
+                    className="border-green-600 text-green-400 hover:bg-green-600/10 transform transition-all duration-300 hover:scale-105 group flex-1"
+                  >
+                    <Award className="mr-2 w-3 h-3 group-hover:animate-pulse" />
+                    Details
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -841,11 +927,30 @@ export default function Portfolio() {
                   deployment. Built a workflow to generate SEO-friendly posts with images and 
                   auto-publish them to the blog.
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   <Badge variant="outline" className="text-gray-400 border-gray-600">n8n</Badge>
                   <Badge variant="outline" className="text-gray-400 border-gray-600">Automation</Badge>
                   <Badge variant="outline" className="text-gray-400 border-gray-600">SEO</Badge>
                   <Badge variant="outline" className="text-gray-400 border-gray-600">Workflow</Badge>
+                </div>
+                <div className="flex gap-3">
+                  <Button 
+                    size="sm"
+                    onClick={() => window.open('https://github.com/yaswanth-yashu/automated-blogging', '_blank')}
+                    className="bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 text-white border-0 transform transition-all duration-300 hover:scale-105 group flex-1"
+                  >
+                    <Github className="mr-2 w-3 h-3 group-hover:animate-bounce" />
+                    GitHub
+                  </Button>
+                  <Button 
+                    size="sm"
+                    variant="outline"
+                    onClick={() => window.open('#', '_blank')}
+                    className="border-yellow-600 text-yellow-400 hover:bg-yellow-600/10 transform transition-all duration-300 hover:scale-105 group flex-1"
+                  >
+                    <ExternalLink className="mr-2 w-3 h-3 group-hover:animate-pulse" />
+                    Workflow
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -1057,60 +1162,60 @@ export default function Portfolio() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-white" />
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 xl:gap-10">
+            <div className="space-y-6 md:space-y-8">
+              <div className="space-y-4 md:space-y-6">
+                <div className="flex items-center space-x-3 md:space-x-4">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 h-5 md:w-6 md:h-6 text-white" />
                   </div>
-                  <div>
-                    <div className="text-white font-semibold">Email</div>
-                    <a href="mailto:yaswanthd161@gmail.com" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  <div className="min-w-0 flex-1">
+                    <div className="text-white font-semibold text-sm md:text-base">Email</div>
+                    <a href="mailto:yaswanthd161@gmail.com" className="text-blue-400 hover:text-blue-300 transition-colors text-sm md:text-base break-all">
                       yaswanthd161@gmail.com
                     </a>
                   </div>
                 </div>
                 
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-white" />
+                <div className="flex items-center space-x-3 md:space-x-4">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 md:w-6 md:h-6 text-white" />
                   </div>
-                  <div>
-                    <div className="text-white font-semibold">Phone</div>
-                    <a href="tel:+919542310266" className="text-green-400 hover:text-green-300 transition-colors">
+                  <div className="min-w-0 flex-1">
+                    <div className="text-white font-semibold text-sm md:text-base">Phone</div>
+                    <a href="tel:+919542310266" className="text-green-400 hover:text-green-300 transition-colors text-sm md:text-base">
                       +91 9542310266
                     </a>
                   </div>
                 </div>
                 
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-red-600 to-pink-600 rounded-full flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-white" />
+                <div className="flex items-center space-x-3 md:space-x-4">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-red-600 to-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 md:w-6 md:h-6 text-white" />
                   </div>
-                  <div>
-                    <div className="text-white font-semibold">Location</div>
-                    <div className="text-gray-400">Kakinada, Andhra Pradesh, India</div>
+                  <div className="min-w-0 flex-1">
+                    <div className="text-white font-semibold text-sm md:text-base">Location</div>
+                    <div className="text-gray-400 text-sm md:text-base">Kakinada, Andhra Pradesh, India</div>
                   </div>
                 </div>
               </div>
               
-              <div className="flex space-x-4">
+              <div className="flex space-x-3 md:space-x-4">
                 <a 
                   href="https://www.linkedin.com/in/yaswanthd" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gradient-to-r from-blue-700 to-blue-600 rounded-full flex items-center justify-center hover:from-blue-600 hover:to-blue-500 transition-all duration-300 transform hover:scale-110"
+                  className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-blue-700 to-blue-600 rounded-full flex items-center justify-center hover:from-blue-600 hover:to-blue-500 transition-all duration-300 transform hover:scale-110"
                 >
-                  <Linkedin className="w-6 h-6 text-white" />
+                  <Linkedin className="w-5 h-5 md:w-6 md:h-6 text-white" />
                 </a>
                 <a 
                   href="https://github.com/yaswanth-yashu" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gradient-to-r from-gray-700 to-gray-600 rounded-full flex items-center justify-center hover:from-gray-600 hover:to-gray-500 transition-all duration-300 transform hover:scale-110"
+                  className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-gray-700 to-gray-600 rounded-full flex items-center justify-center hover:from-gray-600 hover:to-gray-500 transition-all duration-300 transform hover:scale-110"
                 >
-                  <Github className="w-6 h-6 text-white" />
+                  <Github className="w-5 h-5 md:w-6 md:h-6 text-white" />
                 </a>
               </div>
             </div>
