@@ -330,11 +330,11 @@ export default function Portfolio() {
       </nav>
 
       {/* Hero Section with enhanced animations */}
-      <section className="min-h-screen flex items-center justify-center pt-16 sm:pt-20 px-4 pb-8 lg:pb-12 relative">
+      <section className="min-h-screen flex items-center justify-center pt-16 sm:pt-20 px-4 pb-8 lg:pb-12 lg:pl-2 xl:pl-4 relative">
         <div ref={heroRef} className={`container mx-auto transform transition-all duration-1000 ${
           heroInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
         }`}>
-          <div className="grid lg:grid-cols-2 gap-2 lg:gap-3 xl:gap-4 items-center max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-3 lg:gap-4 xl:gap-5 items-center max-w-6xl mx-auto lg:ml-auto lg:mr-8 xl:mr-12">
             {/* Profile Image Section */}
             <div className={`order-1 lg:order-1 flex justify-center lg:justify-end transition-all duration-1000 delay-200 ${
               heroInView ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'
