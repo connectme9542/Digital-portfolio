@@ -334,7 +334,7 @@ export default function Portfolio() {
         <div ref={heroRef} className={`container mx-auto transform transition-all duration-1000 ${
           heroInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
         }`}>
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-10 2xl:gap-12 items-center max-w-7xl mx-auto">
             {/* Profile Image Section */}
             <div className={`order-1 lg:order-1 flex justify-center lg:justify-end transition-all duration-1000 delay-200 ${
               heroInView ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'
@@ -345,7 +345,7 @@ export default function Portfolio() {
                   <img 
                     src="https://avatars.githubusercontent.com/u/86795414?v=4" 
                     alt="Yaswanth Dharmavarapu"
-                    className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 rounded-full object-cover border-4 border-white/10 shadow-2xl transform transition-all duration-500 group-hover:scale-105"
+                    className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-60 lg:h-60 xl:w-72 xl:h-72 2xl:w-80 2xl:h-80 rounded-full object-cover border-4 border-white/10 shadow-2xl transform transition-all duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-transparent to-white/5"></div>
@@ -358,21 +358,21 @@ export default function Portfolio() {
             </div>
             
             {/* Content Section */}
-            <div className={`order-2 lg:order-2 text-center lg:text-left space-y-6 sm:space-y-8 transition-all duration-1000 delay-400 ${
+            <div className={`order-2 lg:order-2 text-center lg:text-left space-y-4 sm:space-y-6 lg:space-y-5 xl:space-y-6 2xl:space-y-8 transition-all duration-1000 delay-400 ${
               heroInView ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'
             }`}>
-              <div className="space-y-3 sm:space-y-4">
-                <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent transition-all duration-1000 leading-tight ${
+              <div className="space-y-2 sm:space-y-3 lg:space-y-2 xl:space-y-3">
+                <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-7xl 2xl:text-8xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent transition-all duration-1000 leading-tight ${
                   heroInView ? 'scale-100' : 'scale-95'
                 }`}>
                   YASWANTH
                 </h1>
-                <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-gray-300 transition-all duration-1000 delay-200 ${
+                <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-2xl xl:text-4xl 2xl:text-4xl font-light text-gray-300 transition-all duration-1000 delay-200 ${
                   heroInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                 }`}>
                   DHARMAVARAPU
                 </h2>
-                <div className={`text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 space-y-1 sm:space-y-2 transition-all duration-1000 delay-400 ${
+                <div className={`text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl 2xl:text-2xl text-gray-400 space-y-1 sm:space-y-2 transition-all duration-1000 delay-400 ${
                   heroInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                 }`}>
                   <div className="typing-animation">Electronics & Communication Engineer</div>
@@ -381,7 +381,7 @@ export default function Portfolio() {
                 </div>
               </div>
           
-              <p className={`text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed transition-all duration-1000 delay-600 ${
+              <p className={`text-base sm:text-lg md:text-xl lg:text-base xl:text-lg 2xl:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed transition-all duration-1000 delay-600 ${
                 heroInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}>
                 Bridging the gap between hardware and software with expertise in embedded systems, 
@@ -389,7 +389,7 @@ export default function Portfolio() {
               </p>
           
               {/* Social Media Links */}
-              <div className={`flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 transition-all duration-1000 delay-700 ${
+              <div className={`flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 lg:gap-3 xl:gap-4 transition-all duration-1000 delay-700 ${
                 heroInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}>
                 <a 
@@ -427,13 +427,13 @@ export default function Portfolio() {
                 </a>
               </div>
           
-              <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start transition-all duration-1000 delay-800 ${
+              <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-3 xl:gap-4 justify-center lg:justify-start transition-all duration-1000 delay-800 ${
                 heroInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}>
                 <Button 
                   size="lg" 
                   onClick={() => scrollToSection('about')}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 group text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 group text-sm sm:text-base lg:text-sm xl:text-base px-4 sm:px-6 lg:px-5 xl:px-6 py-2 sm:py-3"
                 >
                   <span>Explore My Journey</span>
                   <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -447,7 +447,7 @@ export default function Portfolio() {
                     link.download = 'YaswanthD_Resume.pdf';
                     link.click();
                   }}
-                  className="border-gray-600 text-gray-300 hover:bg-white/5 transform transition-all duration-300 hover:scale-105 glass group text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3"
+                  className="border-gray-600 text-gray-300 hover:bg-white/5 transform transition-all duration-300 hover:scale-105 glass group text-sm sm:text-base lg:text-sm xl:text-base px-4 sm:px-6 lg:px-5 xl:px-6 py-2 sm:py-3"
                 >
                   <Download className="mr-2 w-3 h-3 sm:w-4 sm:h-4 group-hover:animate-pulse" />
                   Download Resume
@@ -456,7 +456,7 @@ export default function Portfolio() {
                   size="lg" 
                   variant="outline"
                   onClick={() => scrollToSection('contact')}
-                  className="border-gray-600 text-gray-300 hover:bg-white/5 transform transition-all duration-300 hover:scale-105 glass text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3"
+                  className="border-gray-600 text-gray-300 hover:bg-white/5 transform transition-all duration-300 hover:scale-105 glass text-sm sm:text-base lg:text-sm xl:text-base px-4 sm:px-6 lg:px-5 xl:px-6 py-2 sm:py-3"
                 >
                   Get In Touch
                 </Button>
@@ -1162,9 +1162,9 @@ export default function Portfolio() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 xl:gap-10">
-            <div className="space-y-6 md:space-y-8">
-              <div className="space-y-4 md:space-y-6">
+          <div className="grid md:grid-cols-2 gap-4 lg:gap-6 xl:gap-8 2xl:gap-10 max-w-6xl mx-auto">
+            <div className="space-y-4 md:space-y-6 lg:space-y-5 xl:space-y-6">
+              <div className="space-y-3 md:space-y-4 lg:space-y-3 xl:space-y-4">
                 <div className="flex items-center space-x-3 md:space-x-4">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5 md:w-6 md:h-6 text-white" />
@@ -1200,7 +1200,7 @@ export default function Portfolio() {
                 </div>
               </div>
               
-              <div className="flex space-x-3 md:space-x-4">
+              <div className="flex space-x-3 md:space-x-4 lg:space-x-3 xl:space-x-4">
                 <a 
                   href="https://www.linkedin.com/in/yaswanthd" 
                   target="_blank" 
