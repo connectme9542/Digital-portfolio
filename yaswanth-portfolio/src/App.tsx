@@ -334,7 +334,7 @@ export default function Portfolio() {
         <div ref={heroRef} className={`container mx-auto transform transition-all duration-1000 ${
           heroInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
         }`}>
-          <div className="grid lg:grid-cols-2 gap-3 lg:gap-4 xl:gap-5 items-center max-w-5xl mx-auto lg:ml-16 xl:ml-20 2xl:ml-24">
+          <div className="grid lg:grid-cols-2 gap-3 lg:gap-4 xl:gap-5 items-center max-w-5xl mx-auto">
             {/* Profile Image Section */}
             <div className={`order-1 lg:order-1 flex justify-center lg:justify-center transition-all duration-1000 delay-200 ${
               heroInView ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'
@@ -358,7 +358,7 @@ export default function Portfolio() {
             </div>
             
             {/* Content Section */}
-            <div className={`order-2 lg:order-2 text-center lg:text-left space-y-4 sm:space-y-6 lg:space-y-5 xl:space-y-6 transition-all duration-1000 delay-400 ${
+            <div className={`order-2 lg:order-2 text-center space-y-4 sm:space-y-6 lg:space-y-5 xl:space-y-6 transition-all duration-1000 delay-400 ${
               heroInView ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'
             }`}>
               <div className="space-y-2 sm:space-y-3 lg:space-y-2 xl:space-y-3">
@@ -381,7 +381,7 @@ export default function Portfolio() {
                 </div>
               </div>
           
-              <p className={`text-base sm:text-lg md:text-xl lg:text-base xl:text-lg 2xl:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed transition-all duration-1000 delay-600 ${
+              <p className={`text-base sm:text-lg md:text-xl lg:text-base xl:text-lg 2xl:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 delay-600 ${
                 heroInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}>
                 Bridging the gap between hardware and software with expertise in embedded systems, 
@@ -389,7 +389,7 @@ export default function Portfolio() {
               </p>
           
               {/* Social Media Links */}
-              <div className={`flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 lg:gap-3 xl:gap-4 transition-all duration-1000 delay-700 ${
+              <div className={`flex flex-wrap justify-center gap-3 sm:gap-4 lg:gap-3 xl:gap-4 transition-all duration-1000 delay-700 ${
                 heroInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}>
                 <a 
@@ -427,7 +427,7 @@ export default function Portfolio() {
                 </a>
               </div>
           
-              <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-3 xl:gap-4 justify-center lg:justify-start transition-all duration-1000 delay-800 ${
+              <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-3 xl:gap-4 justify-center transition-all duration-1000 delay-800 ${
                 heroInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}>
                 <Button 
