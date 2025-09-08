@@ -807,7 +807,7 @@ export default function Portfolio() {
                   <Button 
                     size="sm"
                     variant="outline"
-                    onClick={() => window.open('#', '_blank')}
+                    onClick={() => window.open('https://cdn.jsdelivr.net/gh/yaswanth-yashu/Sign-Language-to-Speech-Converter@main/Demo/demo.mp4', '_blank')}
                     className="border-blue-600 text-blue-400 hover:bg-blue-600/10 transform transition-all duration-300 hover:scale-105 group flex-1"
                   >
                     <ExternalLink className="mr-2 w-3 h-3 group-hover:animate-pulse" />
@@ -894,7 +894,7 @@ export default function Portfolio() {
                 <div className="flex gap-3">
                   <Button 
                     size="sm"
-                    onClick={() => window.open('https://github.com/yaswanth-yashu/line-follower-robot', '_blank')}
+                    onClick={() => window.open('https://github.com/yaswanth-yashu/line-follower', '_blank')}
                     className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white border-0 transform transition-all duration-300 hover:scale-105 group flex-1"
                   >
                     <Github className="mr-2 w-3 h-3 group-hover:animate-bounce" />
@@ -903,7 +903,7 @@ export default function Portfolio() {
                   <Button 
                     size="sm"
                     variant="outline"
-                    onClick={() => window.open('#', '_blank')}
+                    onClick={() => window.open('https://www.electrotalks.online/2024/11/line.html', '_blank')}
                     className="border-green-600 text-green-400 hover:bg-green-600/10 transform transition-all duration-300 hover:scale-105 group flex-1"
                   >
                     <Award className="mr-2 w-3 h-3 group-hover:animate-pulse" />
