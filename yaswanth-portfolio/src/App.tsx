@@ -798,7 +798,7 @@ export default function Portfolio() {
                 <div className="flex gap-3">
                   <Button 
                     size="sm"
-                    onClick={() => window.open('https://github.com/yaswanth-yashu/sign-language-converter', '_blank')}
+                    onClick={() => window.open('https://github.com/yaswanth-yashu/Sign-Language-to-Speech-Converter', '_blank')}
                     className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white border-0 transform transition-all duration-300 hover:scale-105 group flex-1"
                   >
                     <Github className="mr-2 w-3 h-3 group-hover:animate-bounce" />
@@ -846,7 +846,7 @@ export default function Portfolio() {
                 <div className="flex gap-3">
                   <Button 
                     size="sm"
-                    onClick={() => window.open('https://github.com/yaswanth-yashu/LintAI', '_blank')}
+                    onClick={() => window.open('https://github.com/yaswanth-yashu/Lint', '_blank')}
                     className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white border-0 transform transition-all duration-300 hover:scale-105 group flex-1"
                   >
                     <Github className="mr-2 w-3 h-3 group-hover:animate-bounce" />
@@ -855,7 +855,7 @@ export default function Portfolio() {
                   <Button 
                     size="sm"
                     variant="outline"
-                    onClick={() => window.open('https://lintai-app.vercel.app', '_blank')}
+                    onClick={() => window.open('https://lintai.vercel.app', '_blank')}
                     className="border-purple-600 text-purple-400 hover:bg-purple-600/10 transform transition-all duration-300 hover:scale-105 group flex-1"
                   >
                     <ExternalLink className="mr-2 w-3 h-3 group-hover:animate-pulse" />
